@@ -8,7 +8,7 @@
 
                 <a class="text-uppercase h-100" href="#">characters</a>
 
-                <a class="text-uppercase h-100" href="#">comics</a>
+                <a class="text-uppercase h-100 {{Route::currentRouteName() == 'comics.index' ? 'active' : '' }}" href="{{route('comics.index')}}">comics</a>
 
                 <a class="text-uppercase h-100" href="#">movies</a>
 
@@ -24,7 +24,9 @@
 
                 <a class="text-uppercase h-100" href="#">news</a>
 
-                <a class="text-uppercase h-100" href="#">shop</a>
+                <a class="nav-link text-uppercase h-100 {{Route::currentRouteName() == 'comics.create' ? 'active' : ''}}"  href="{{route('comics.create')}}">
+                    Inserisci fumetto
+                </a>
 
         </div>
 

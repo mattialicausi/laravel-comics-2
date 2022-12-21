@@ -18,6 +18,16 @@
                             <a href="{{route('comics.show', $comic->id)}}"><img src="{{$comic->thumb}}" alt="{{$comic->title}}"></a>
                         </div>
 
+                        <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary">Modifica</a>
+
+                           <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red">Cancella</button>
+                            </form>
+
+
+
                         <div class="text-white py-2">{{$comic->series}}</div>
 
                     </div>
